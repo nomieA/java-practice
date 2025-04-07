@@ -60,7 +60,10 @@ public class LoopTest {
 		System.out.println('\n' + "拡張forで再検証：\n");
 
 		long maxCheck = Long.MIN_VALUE;
-		String currentIndex = "";
+		String currentIndex = "";		
+		String maxIndexCheck = "";
+
+		
 		int counterXCheck = 0, counterYCheck = 0, counterZCheck = 0;
 
 		for (long[][] array2D : array3D) {
@@ -82,6 +85,7 @@ public class LoopTest {
 							counterXCheck++;
 							if (counterXCheck == (int) array3D.length) {
 								counterXCheck = 0;
+								
 							}
 
 						}
@@ -90,6 +94,7 @@ public class LoopTest {
 
 					if (arrayElement > maxCheck) {
 						maxCheck = arrayElement;
+						maxIndexCheck = currentIndex;
 
 					}
 
