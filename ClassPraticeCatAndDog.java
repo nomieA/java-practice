@@ -1,7 +1,7 @@
 class Creature {
 
 	String name = "NoName";
-	int hp;
+	static int hp;
 	int mp;
 	int exp;
 
@@ -9,7 +9,7 @@ class Creature {
 	int def;
 
 	boolean isAlive = true;
-	boolean eatable = false;
+	boolean edible = false;
 
 	void attack() {
 	}
@@ -31,6 +31,7 @@ class Creature {
 
 class Animal extends Creature {
 
+	Animal(){}
 }
 
 class Human extends Creature {
@@ -43,7 +44,7 @@ class Monster extends Creature {
 
 class Cat extends Animal {
 
-	Cat(String name) {
+	public Cat(String name) {
 		this.name = name;
 		this.hp = 150;
 		this.atk = 20;
@@ -95,7 +96,9 @@ public class ClassPraticeCatAndDog {
 
 		fight.attack(catNeko, dogInu);
 		fight.attack(dogInu, catNeko);
-
+		
+		Animal a = new Animal();
+		a.checkAlive();
 	}
 
 }

@@ -88,25 +88,8 @@ public class GomokuMine {
 				isFP = true;
 			}
 
-			//着手点のから、横座標-2から+2、縦、斜めの値を走査する
-			//そのためには、各方向の最大連珠可能域を確認
-			//つまり、r+2 r-2 c+2 c-2 の値はinBoundsで確認
-			if (inBounds(num, row + 2, col + 2) && inBounds(num, row - 2, col - 2)) {
-				for (int i = row - 2; i < row + 2; i++) {
-					int sum = 0;
-					sum += num[i][col];
-					if (sum == 5) {
-						System.out.println("First player win.");
-						break out;
-					}
-					if (sum == 50) {
-						System.out.println("Second player win");
-						break out;
-					}
 
-				}
-
-			}
+			//Check Win
 
 		}
 	}
