@@ -1,6 +1,8 @@
 package PackagePractice2;
 
 public class RectangleAreaPerimeter {
+	
+	
 
 	public static void main(String[] args) {
 		MyRectangle rec1 = new MyRectangle(); // 默认 0, 0
@@ -55,11 +57,11 @@ class MyRectangle {
 		}
 	}
 
-	public int getArea() {
+	 public int getArea() {
 		return this.length * this.width;
 	}
 
-	public int getPerimeter() {
+	 public int getPerimeter() {
 		return 2 * (this.length + this.width);
 	}
 }

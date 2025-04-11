@@ -2,7 +2,7 @@
 public class DirectionVectorPractice {
 
 	// printBoard(2次元配列の名前)⇒打印棋盘
-	 void printBoard(int board[][]) {
+	 static void printBoard(int board[][]) {
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[0].length; j++) {
 				System.out.print(board[i][j]);
@@ -11,12 +11,13 @@ public class DirectionVectorPractice {
 
 		}
 	}
+	 
+	 
 
 	public static void main(String[] args) {
 
 		int[][] board = new int[10][10];
-		DirectionVectorPractice pb = new DirectionVectorPractice();
-		pb.printBoard(board);
+		DirectionVectorPractice.printBoard(board);
 		System.out.println();
 
 		// 原点
@@ -37,8 +38,15 @@ public class DirectionVectorPractice {
 				board[nx][ny] = 1;
 			}
 		}
-		pb.printBoard(board);
+		printBoard(board);
+		
 
 	}
+
+}
+
+class methoodTest{
+	
+	printBoard(board);
 
 }
