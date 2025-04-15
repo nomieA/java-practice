@@ -80,6 +80,13 @@ class Human extends Animal implements faith {
 		this.hp = 100;
 		this.atk = 50;
 	}
+	
+	Human(String name) {
+		this.name = name;
+		this.hp = 200;
+		this.atk = 50;
+		this.def = 10;
+	}
 
 	@Override
 	public void thinkAbout(Ideology i) {
@@ -99,7 +106,9 @@ class Monster extends Creature {
 
 	Monster() {
 		this.hp = 100;
-		this.atk = 50;
+		this.atk = 30;
+		this.def = 10;
+
 	}
 
 	@Override
